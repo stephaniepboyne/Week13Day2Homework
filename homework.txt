@@ -1,0 +1,37 @@
+1. "many forms"
+2. In OOP polymorphism can be implemented using inheritance and interfaces. It is when a class can be two things, for example a printer can implement an IConnect (device) interface which allows it to be connected to a computer. It therefore exist as both a printer and a device. 
+
+public class Printer implements IConnect{
+
+    public String print(String data){
+        return "printing: " + data;
+    }
+
+    public String connect(String data){
+        return "connecting to " + data + " network";
+    }
+
+3. Inheritance and interfaces
+4. Two forms 
+5. For example, you may have two artists who extend from an Artist class, with shared attributes including name and date of birth, but be two different kinds of artist, e.g. painter and sculptor, and therefore have different behavious. They may share a polymorphic method - introduce() - which take different forms (overwrite) depending on who they are. Perhaps introduce() for a sculptor returns the string "Hi, I sculpt", whereas for the painter, it returns "Hi, I paint".
+6. Composition is when an object is a part of another object. 
+7. You would use composition when an object, as oppose to having something, or being something, is PART of something. 
+For example, the spine of a book is part of a book. 
+
+public class Spine{
+    private int width;
+    ...
+}
+
+public class Book {
+    private Spine spine;
+
+    public Book(){
+        this.spine = new Spine();
+    } 
+}
+
+8. Aggregation is when a an object has an object, but that object which it has can exist indepently from the object which contains it. This is different to composition, in which the object would not exists without the object in which it's contained. 
+9. It's more flexible than inheritance which gives you a framework which you're obliged to stick to. It also allows you to modify objects without disturbing existing code. 
+10. They are also destroyed. 
+11. They can exists indepently of the object they compose, so nothing. 
